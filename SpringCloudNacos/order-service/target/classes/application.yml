@@ -19,7 +19,7 @@ mybatis:
     map-underscore-to-camel-case: true
 logging:
   level:
-    cn.itcast: debug
+    com.lyq: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
 user-service:
