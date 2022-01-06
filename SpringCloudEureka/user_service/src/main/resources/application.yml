@@ -6,6 +6,8 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: userservice
 mybatis:
   type-aliases-package: com.lyq.pojo
   configuration:
@@ -15,3 +17,8 @@ logging:
     com.lyq: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
+#配置Eureka注册
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
