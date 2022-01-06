@@ -1,0 +1,14 @@
+server:
+  port: 9000   #端口
+spring:
+  application:
+    name: eureka-server #服务名称
+#配置eureka server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false #是否将自己注册到服务注册中心
+    fetch-registry: false #是否从eureka中获取注册信息
+    service-url: #配置暴露给eureka Client 的请求地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
