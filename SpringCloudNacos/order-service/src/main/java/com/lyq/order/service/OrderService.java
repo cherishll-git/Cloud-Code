@@ -21,7 +21,7 @@ public class OrderService {
         // 1.查询订单
         Order order = orderMapper.findById(orderId);
         // 2.查询用户信息
-        String url = "http://user-service/user/" + order.getUserId();
+        String url = "http://userservice/user/" + order.getUserId();
         User user = restTemplate.getForObject(url, User.class);
         // 3.封装用户信息
         order.setUser(user);
